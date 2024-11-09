@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warning: You Are Hacked</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      font-size: 2em;
+      animation: pulse 1s infinite alternate;
+    }
+
+    /* Efekti i dritës që pulson */
+    @keyframes pulse {
+      0% {
+        background-color: black;
+        color: red;
+      }
+      50% {
+        background-color: darkred;
+        color: white;
+      }
+      100% {
+        background-color: red;
+        color: white;
+      }
+    }
+
+    .message {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .normal-message {
+      color: yellow;
+      font-size: 1.5em;
+    }
+
+    .link {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    audio {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mesazhi Frikësues -->
+  <div class="message">YOU ARE HACKED</div>
+  <div class="normal-message">Studentat e Botes Digjitale jeni te markuar ne listen e viktimes</div>
+  <div class="normal-message">Nuk do te shpetoni ne dim qdo gje per juve</div>
+  <div class="normal-message">
+    <p>Learn more about online security: <a class="link" href="https://www.cybersecurityeducation.org/" target="_blank">Cybersecurity Education</a></p>
+  </div>
+
+  <!-- Muzika e frikshme -->
+  <audio autoplay loop>
+    <source src="https://gamekill.cz/cstrike/sound/CSBD_ZombiePlague/round_start_nemesis_02.wav" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    setTimeout(function() {
+      alert("Ne po vim per ju");
+    }, 5000);  // Alert pas 5 sekondash
+  </script>
+</body>
+</html>
